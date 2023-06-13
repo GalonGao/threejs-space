@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+#three-container{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+@keyframes humanMove {
+  0% {
+    top: 300px;
+  }
+  25% {
+    top: 280px;
+  }
+  50% {
+    top: 300px;
+  }
+  75% {
+    top: 320px;
+  }
+  100% {
+    background: -100px;
+  }
+}
+.plane-human {
+  position: absolute;
+  z-index: 100;
+  width: 260px;
+  top: 300px;
+  right: 400px;
+  animation: humanMove 8s linear 0s infinite normal;
+}
+.ground {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 400px;
+  background-image: url('../static/images/ground.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  bottom: 0;
+  left: 0;
+}
